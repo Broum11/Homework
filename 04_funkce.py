@@ -20,8 +20,8 @@ def obvod_kruhu(polomer):
     return(2 * polomer * 3.14)
 
 vypocet_obvodu =(obvod_kruhu(polomer))
-print('Výpočet obvodu kruhu je :')
-print(vypocet_obvodu)
+print(f'Výpočet obvodu kruhu je : {vypocet_obvodu}') # přes f se to dá vyprintovat na jeden řádek
+
 
 
 
@@ -35,7 +35,7 @@ import math
 polomer = int(input("Zadejte poloměr kruhu: "))
 
 def obsah_kruhu (polomer):
-    return(round(polomer**2 * (math.pi),2))
+    return(round(polomer**2 * (math.pi),2))     # údaj za čarkou znamená na kolik desetiných míst se to zaokrouhlí(round)
 
 vypocet_obsahu_kruhu = (obsah_kruhu(polomer))
 print('Výpočet obsahu kruhu je :')
