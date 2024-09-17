@@ -18,7 +18,7 @@ class Planeta:
     def info(self): # metoda
         print(f"Toto je {self.nazev} a je {self.poradi} od Slunce")     
 
-Zeme = Planeta ('Země', 3)
+Zeme = Planeta ('Země', 3) # Vytvoření dvou instancí
 Merkur = Planeta ('Merkur', 1)
 
 Zeme.info() # metoda se musí zavolat
