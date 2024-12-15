@@ -1,0 +1,32 @@
+
+INSERT INTO authors (id, first_name, last_name, country) 
+VALUES
+(1, 'Franz', 'Kafka', 'Německo')
+(2, 'Gabriel', 'Márquez', 'Kolumbie'),
+(3, 'Leo', 'Tolstoj', 'Rusko')
+
+SELECT*FROM authors
+
+INSERT INTO books (id, title, author_id, published_year, price)
+VALUES
+(1, 'Proces', 1, 1925,5),
+(2, 'Diáře a dopisy', 1, 1999,6),
+(3, 'Všechny moje ženy', 2, 2002,5),
+(4, 'Sto roků samoty', 2, 1967,7),
+(5, 'Vojna a mír', 3, 2002,8)
+
+SELECT  id, title, author_id, published_year, price 
+FROM books 
+WHERE published_year >= 2001
+
+SELECT  id, title, author_id, published_year, price 
+FROM books 
+ORDER BY price DESC
+
+SELECT
+authors.id,
+authors.first_name,
+authors.last_name,
+books.title
+FROM books
+INNER JOIN authors ON authors.id = books.author_id
